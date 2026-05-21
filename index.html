@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduMaster - Escola Online</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#222;
+    }
+
+    header{
+      width:100%;
+      background:linear-gradient(135deg,#2563eb,#1e40af);
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:white;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1{
+      font-size:28px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#93c5fd;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:120px 8% 80px;
+      background:
+      linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:white;
+    }
+
+    .hero-content{
+      max-width:800px;
+      animation:fadeIn 1.2s ease;
+    }
+
+    .hero h2{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      line-height:1.6;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#2563eb;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-size:18px;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#1d4ed8;
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:90px 8%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:38px;
+      margin-bottom:60px;
+      color:#1e3a8a;
+    }
+
+    .courses{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:25px;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#1e40af;
+    }
+
+    .card p{
+      color:#555;
+      line-height:1.5;
+      margin-bottom:20px;
+    }
+
+    .stats{
+      background:#1e40af;
+      color:white;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:30px;
+      text-align:center;
+    }
+
+    .stat h2{
+      font-size:45px;
+      margin-bottom:10px;
+    }
+
+    .teachers{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .teacher{
+      background:white;
+      border-radius:18px;
+      text-align:center;
+      padding:30px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .teacher img{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:20px;
+    }
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:35px;
+      margin-top:50px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero h2{
+        font-size:38px;
+      }
+
+      .hero p{
+        font-size:17px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>EduMaster</h1>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Cursos</a>
+      <a href="#">Professores</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Aprenda Online com os Melhores Professores</h2>
+
+      <p>
+        Plataforma moderna de ensino online com cursos completos,
+        certificados e aulas ao vivo para transformar seu futuro.
+      </p>
+
+      <a href="#" class="btn">Começar Agora</a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Cursos Populares</h2>
+
+    <div class="courses">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Programação Web</h3>
+
+          <p>
+            Aprenda HTML, CSS, JavaScript e crie sites modernos do zero.
+          </p>
+
+          <a href="#" class="btn">Ver Curso</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522202222206-b750505b9534?q=80&w=2071&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Marketing Digital</h3>
+
+          <p>
+            Aprenda estratégias de tráfego pago, vendas e redes sociais.
+          </p>
+
+          <a href="#" class="btn">Ver Curso</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2032&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Design Gráfico</h3>
+
+          <p>
+            Domine Photoshop, identidade visual e design profissional.
+          </p>
+
+          <a href="#" class="btn">Ver Curso</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="stats">
+
+    <div class="stat">
+      <h2 id="students">0</h2>
+      <p>Alunos</p>
+    </div>
+
+    <div class="stat">
+      <h2 id="courses">0</h2>
+      <p>Cursos</p>
+    </div>
+
+    <div class="stat">
+      <h2 id="teachersCount">0</h2>
+      <p>Professores</p>
+    </div>
+
+    <div class="stat">
+      <h2 id="certificates">0</h2>
+      <p>Certificados</p>
+    </div>
+
+  </section>
+
+  <section>
+    <h2 class="title">Nossos Professores</h2>
+
+    <div class="teachers">
+
+      <div class="teacher">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+        <h3>Lucas Martins</h3>
+
+        <p>Especialista em Desenvolvimento Web.</p>
+      </div>
+
+      <div class="teacher">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+        <h3>Ana Souza</h3>
+
+        <p>Especialista em Marketing Digital.</p>
+      </div>
+
+      <div class="teacher">
+        <img src="https://randomuser.me/api/portraits/men/12.jpg">
+
+        <h3>Pedro Lima</h3>
+
+        <p>Especialista em Design e Branding.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 EduMaster - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+
+    // Animação de números
+
+    function animateValue(id, start, end, duration){
+
+      let obj = document.getElementById(id);
+      let range = end - start;
+      let current = start;
+      let increment = end > start ? 1 : -1;
+      let stepTime = Math.abs(Math.floor(duration / range));
+
+      let timer = setInterval(() => {
+
+        current += increment;
+        obj.textContent = current + "+";
+
+        if(current == end){
+          clearInterval(timer);
+        }
+
+      }, stepTime);
+    }
+
+    animateValue("students", 0, 5000, 2000);
+    animateValue("courses", 0, 120, 2000);
+    animateValue("teachersCount", 0, 45, 2000);
+    animateValue("certificates", 0, 8000, 2000);
+
+    // Scroll suave
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+      anchor.addEventListener('click', function(e){
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior:'smooth'
+        });
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
